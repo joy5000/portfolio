@@ -1,10 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Header />
+  <imgandaddress />
+  <education />
+  <projects />
+  <experience />
+  <contuct />
+  
+  <footer1 />
   <router-view/>
 </template>
+
+
+<script>
+import Header from "@/components/Header";
+import imgandaddress from "@/components/imgandaddress";
+import Education from "./components/education.vue";
+import Projects from "./components/projects.vue";
+import Experience from "./components/experience.vue";
+import Contuct from "./components/contuct.vue";
+import footer from "./components/footer.vue";
+import Footer1 from "./components/footer.vue";
+
+
+export default {
+
+    components: {
+    Header,
+    imgandaddress,
+    Education,
+    Projects,
+    Experience,
+    Contuct,
+    footer,
+    Footer1
+},
+
+}
+
+</script>
 
 <style>
 #app {
@@ -15,16 +48,5 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
